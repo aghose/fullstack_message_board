@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Fullstack message board using Vue, Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Akash Ghose",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aghose/fullstack_message_board.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aghose/fullstack_message_board/issues"
+  },
+  "homepage": "https://github.com/aghose/fullstack_message_board#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

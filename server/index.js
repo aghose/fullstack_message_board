@@ -35,4 +35,5 @@ app.get('/', (req, res) => {
  */
 const port = process.env.PORT || 1660;
 
+//Starts up my server at port [Heroku's port || 1660]
 app.listen(port, () => console.log(`Server started on port ${port}`));

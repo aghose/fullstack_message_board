@@ -43,6 +43,19 @@ app.get('/messages', (req, res) => {
 
 });
 
+//Express route to add a message to our database
+app.post('/messages', (req, res) =>{
+
+    const msg = req.body;
+    console.log(msg);
+    messagesObj.addMessage(msg).then(() => {
+        res.json(message);
+    }).catch((err) => {
+        res.status(500);
+        res.json(err);
+    });
+});
+
 /**
  * Port on which our server will run on;
  * Heroku's port || port 1660

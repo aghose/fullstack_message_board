@@ -6,6 +6,10 @@ const morgan = require('morgan');
 //Creating a new instance of an express app
 const app = new express();
 
+//Bringing in access to messages from database
+const messagesObj = require('./db/messages.js');
+
+
 /**
  * Middleware - Adds additional functionality to an express app
  * Morgan - an http request logger. Logs incoming requests, makes it easier to debug
@@ -26,6 +30,16 @@ app.get('/', (req, res) => {
     res.json({
         message: 'Fullstack message board!!!'
     })
+
+});
+
+//Express route that gets all of our messages
+app.get('/messages', (req, res) => {
+
+    //This gets all the messages and sends back a json file with the messages array
+   messagesObj.getAllMessages().then((messages) =>{
+       res.json(messages);
+   });
 
 });
 

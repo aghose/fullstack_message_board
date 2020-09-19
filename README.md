@@ -3,4 +3,6 @@ I will use:
     Vue.js
     bootstrap
     Express
+    Monk
+    Joi
     MongoDB
